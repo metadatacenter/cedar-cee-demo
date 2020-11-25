@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cedar-cee-demo": {
+    "cedar-cee-demo-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cedar-cee-demo",
+            "outputPath": "dist/cedar-cee-demo-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cedar-cee-demo:build"
+            "browserTarget": "cedar-cee-demo-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cedar-cee-demo:build:production"
+              "browserTarget": "cedar-cee-demo-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cedar-cee-demo:build"
+            "browserTarget": "cedar-cee-demo-angular:build"
           }
         },
         "test": {
@@ -119,15 +119,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "cedar-cee-demo:serve"
+            "devServerTarget": "cedar-cee-demo-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cedar-cee-demo:serve:production"
+              "devServerTarget": "cedar-cee-demo-angular:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "cedar-cee-demo"
+  "defaultProject": "cedar-cee-demo-angular"
 }
