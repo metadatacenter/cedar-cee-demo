@@ -1,8 +1,9 @@
 <p>CEDAR Embeddable Editor Embedded from HERE</p>
-<hr />
-<cedar-embeddable-editor
-  template-location-prefix="https://component.metadatacenter.orgx/cedar-embeddable-editor-sample-templates/"
-  show-sample-template-links="true"
-></cedar-embeddable-editor>
+<hr/>
+<ng-container *ngIf="configService.appConfig.ceeConfig != null">
+  <cedar-embeddable-editor
+    [config]="configService.appConfig.ceeConfig"
+  ></cedar-embeddable-editor>
+</ng-container>
 <hr/>
 <p>CEDAR Embeddable Editor Embedded until HERE</p>
