@@ -8,10 +8,13 @@ import {AppConfigService} from '../services/app-config.service';
 })
 export class DashboardComponent implements OnInit {
 
+  confService: AppConfigService = null;
+
   constructor(
     private configService: AppConfigService
   ) {
     console.log('DashboardComponent.constructor');
+    this.confService = configService;
     console.log(configService.appConfig.ceeConfig);
   }
 
