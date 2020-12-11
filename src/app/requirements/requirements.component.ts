@@ -1,4 +1,14 @@
-<!doctype html>
+import {Component, OnInit} from '@angular/core';
+import {AppConfigService} from '../services/app-config.service';
+
+@Component({
+  selector: 'app-requirements',
+  templateUrl: './requirements.component.html',
+  styleUrls: ['./requirements.component.scss']
+})
+export class RequirementsComponent implements OnInit {
+
+  code = `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -25,7 +35,16 @@
 <script type="text/javascript" src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
 <!-- load the component -->
-<script type="text/javascript" src="https://component.metadatacenter.orgx/cedar-embeddable-editor/cedar-embeddable-editor-2.5.38-SNAPSHOT.js"></script>
+<script type="text/javascript" src="https://component.metadatacenter.org/cedar-embeddable-editor/cedar-embeddable-editor-2.5.38.js"></script>
 <app-root></app-root>
 </body>
 </html>
+`
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+  }
+
+}

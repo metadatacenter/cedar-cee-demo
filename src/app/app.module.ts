@@ -14,6 +14,10 @@ import {MatCardModule} from '@angular/material/card';
 import {ConfigControlledComponent} from './config-controlled/config-controlled.component';
 import {WaitSpinnerComponent} from './wait-spinner/wait-spinner.component';
 import {WaitHiddenComponent} from './wait-hidden/wait-hidden.component';
+import {RequirementsComponent} from './requirements/requirements.component';
+import {HIGHLIGHT_OPTIONS, HighlightModule} from 'ngx-highlightjs';
+import {MatButtonModule} from '@angular/material/button';
+import {ParametersComponent} from './parameters/parameters.component';
 
 const appInitializerFn = (appConfig: AppConfigService) => {
   return () => {
@@ -25,6 +29,8 @@ const appInitializerFn = (appConfig: AppConfigService) => {
   declarations: [
     AppComponent,
     IntroComponent,
+    RequirementsComponent,
+    ParametersComponent,
     ConfigBasicComponent,
     ConfigControlledComponent,
     WaitSpinnerComponent,
@@ -38,7 +44,9 @@ const appInitializerFn = (appConfig: AppConfigService) => {
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    BrowserAnimationsModule
+    MatButtonModule,
+    BrowserAnimationsModule,
+    HighlightModule
   ],
   providers: [
     AppConfigService,
@@ -47,6 +55,18 @@ const appInitializerFn = (appConfig: AppConfigService) => {
       useFactory: appInitializerFn,
       multi: true,
       deps: [AppConfigService]
+    },
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        lineNumbersLoader: () => import('highlightjs-line-numbers.js'), // Optional, only if you want the line numbers
+        languages: {
+          typescript: () => import('highlight.js/lib/languages/typescript'),
+          css: () => import('highlight.js/lib/languages/css'),
+          xml: () => import('highlight.js/lib/languages/xml')
+        }
+      }
     }
   ],
   bootstrap: [AppComponent]
