@@ -1,4 +1,14 @@
-<!doctype html>
+import {Component, OnInit} from '@angular/core';
+import {AppConfigService} from '../services/app-config.service';
+
+@Component({
+  selector: 'app-requirements',
+  templateUrl: './requirements.component.html',
+  styleUrls: ['./requirements.component.scss']
+})
+export class RequirementsComponent implements OnInit {
+
+  code = `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -29,3 +39,12 @@
 <app-root></app-root>
 </body>
 </html>
+`
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+  }
+
+}
