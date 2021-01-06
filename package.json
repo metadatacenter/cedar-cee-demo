@@ -1,6 +1,6 @@
 {
   "name": "cedar-cee-docs-angular",
-  "version": "2.5.38-SNAPSHOT",
+  "version": "2.5.38",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
