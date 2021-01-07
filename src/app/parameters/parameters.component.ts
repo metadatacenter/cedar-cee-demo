@@ -15,6 +15,9 @@ export class ParametersComponent implements OnInit {
     "showSampleTemplateLinks": true,
     "expandedSampleTemplateLinks": true,
 
+    "showFooter": true,
+    "showHeader": true,
+
     "terminologyProxyUrl": "https://api-php.cee.metadatacenter.org/index.php",
 
     "showTemplateRenderingRepresentation": true,
