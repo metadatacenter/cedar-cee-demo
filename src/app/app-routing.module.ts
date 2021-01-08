@@ -7,6 +7,7 @@ import {WaitSpinnerComponent} from './wait-spinner/wait-spinner.component';
 import {WaitHiddenComponent} from './wait-hidden/wait-hidden.component';
 import {RequirementsComponent} from './requirements/requirements.component';
 import {ParametersComponent} from "./parameters/parameters.component";
+import {ResourcesComponent} from "./resources/resources.component";
 
 const routes: Routes = [
   {
@@ -27,6 +28,11 @@ const routes: Routes = [
   {
     path: 'requirements',
     component: RequirementsComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'resources',
+    component: ResourcesComponent,
     pathMatch: 'full'
   },
   {

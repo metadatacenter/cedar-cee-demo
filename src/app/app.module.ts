@@ -18,6 +18,8 @@ import {RequirementsComponent} from './requirements/requirements.component';
 import {HIGHLIGHT_OPTIONS, HighlightModule} from 'ngx-highlightjs';
 import {MatButtonModule} from '@angular/material/button';
 import {ParametersComponent} from './parameters/parameters.component';
+import {MatIconModule} from "@angular/material/icon";
+import {ResourcesComponent} from "./resources/resources.component";
 
 const appInitializerFn = (appConfig: AppConfigService) => {
   return () => {
@@ -30,6 +32,7 @@ const appInitializerFn = (appConfig: AppConfigService) => {
     AppComponent,
     IntroComponent,
     RequirementsComponent,
+    ResourcesComponent,
     ParametersComponent,
     ConfigBasicComponent,
     ConfigControlledComponent,
@@ -45,6 +48,7 @@ const appInitializerFn = (appConfig: AppConfigService) => {
     MatListModule,
     MatCardModule,
     MatButtonModule,
+    MatIconModule,
     BrowserAnimationsModule,
     HighlightModule
   ],

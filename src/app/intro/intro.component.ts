@@ -10,6 +10,12 @@ export class IntroComponent implements OnInit {
 
   confService: AppConfigService = null;
 
+  configuration = {
+    sampleTemplateLocationPrefix: 'https://component.staging.metadatacenter.org/cedar-embeddable-editor-sample-templates/',
+    loadSampleTemplateName: '01',
+    showFooter: false
+  };
+
   constructor(
     private configService: AppConfigService
   ) {
