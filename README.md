@@ -1,4 +1,6 @@
-# CedarCeeDemo
+# CEDAR CEE Documentation Application
+
+This project provides documentation about the CEDAR Embeddable Editor, created as an Angular WebComponent.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 
